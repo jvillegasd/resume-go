@@ -1,0 +1,16 @@
+[project]
+name = "resume-go"
+version = "0.1.0"
+description = "Convert LinkedIn-exported PDF into an ATS-optimized LaTeX resume."
+requires-python = ">=3.10"
+dependencies = [
+  "opendataloader-pdf>=0.1",
+  "jinja2>=3.1",
+]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+py-modules = []
