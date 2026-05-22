@@ -5,7 +5,7 @@ MOUNTS := -v $(WORK):/work \
           -v $(WORK)/scripts:/app/scripts \
           -v $(WORK)/templates:/app/templates
 
-.PHONY: build run shell md tex clean
+.PHONY: build run shell md tex linkedin-source clean
 
 build:
 	docker build -t $(IMAGE) .
@@ -23,6 +23,11 @@ md:
 tex:
 	docker run --rm $(MOUNTS) $(IMAGE) \
 		python scripts/md_to_tex.py --input /work/build/resume.md --out /work/build/resume.tex --compile
+
+# LinkedIn source markdown only — Profile.pdf → build/linkedin_source.md
+linkedin-source:
+	docker run --rm $(MOUNTS) $(IMAGE) \
+		python scripts/profile_to_linkedin_md.py --input-pdf /work/Profile.pdf --out /work/build/linkedin_source.md
 
 shell:
 	docker run --rm -it $(MOUNTS) $(IMAGE) bash
