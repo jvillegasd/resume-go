@@ -120,11 +120,18 @@
 \vspace{6pt}
 
 
-((* if education *))
-%-----------EDUCATION-----------
-\section{Education}
+((* if summary *))
+%-----------SUMMARY-----------
+\section{Summary}
+\small{((( summary )))} \vspace{4pt}
+((* endif *))
+
+
+((* if experience *))
+%-----------EXPERIENCE-----------
+\section{Experience}
   \resumeSubHeadingListStart
-  ((* for e in education *))
+  ((* for e in experience *))
     \resumeSubheading
       {((( e.left )))}{((( e.date )))}
       {((( e.right )))}{((( e.loc )))}
@@ -140,11 +147,11 @@
 ((* endif *))
 
 
-((* if experience *))
-%-----------EXPERIENCE-----------
-\section{Experience}
+((* if education *))
+%-----------EDUCATION-----------
+\section{Education}
   \resumeSubHeadingListStart
-  ((* for e in experience *))
+  ((* for e in education *))
     \resumeSubheading
       {((( e.left )))}{((( e.date )))}
       {((( e.right )))}{((( e.loc )))}
