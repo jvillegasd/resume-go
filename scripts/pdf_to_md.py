@@ -78,6 +78,34 @@ ES_PHRASES = {
 }
 
 
+def split_date_location(meta: str) -> str:
+    """LinkedIn renders an entry's date line as one whitespace-joined string:
+        "February 2024 - Present (2 yrs 4 mos) Reston, Virginia, United States"
+    Split it into `<date> · <location>` so md_to_tex's splitter places them
+    in the right tex columns. Idempotent (returns unchanged if already split
+    or if no location is present).
+    """
+    if not meta or "·" in meta:
+        return strip_elapsed_duration(meta)
+    # Prefer the duration-paren anchor when present: location is whatever
+    # comes after the closing paren.
+    m = re.search(r"\)\s+(.+)$", meta)
+    if m and m.group(1).strip():
+        return f"{strip_elapsed_duration(meta[:m.start()+1].strip())} · {m.group(1).strip()}"
+    # No duration parens (e.g. Education "2016 - 2021 Some City"). Split on
+    # the end of the date range, recognized via END_TOKEN.
+    m = re.match(rf"^(.+?{END_TOKEN})\s+([A-Z].+)$", meta, re.IGNORECASE)
+    if m:
+        return f"{strip_elapsed_duration(m.group(1).strip())} · {m.group(2).strip()}"
+    return strip_elapsed_duration(meta)
+
+
+def strip_elapsed_duration(text: str) -> str:
+    """Remove LinkedIn elapsed-duration parens like '(2 yrs 4 mos)'."""
+    text = re.sub(r"\s*\([^)]*(?:yr|yrs|mo|mos)[^)]*\)", "", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
 def translate(s: str) -> str:
     if not s:
         return s
@@ -313,7 +341,7 @@ def parse(elements: list[dict]) -> Doc:
     for entries in doc.sections.values():
         for e in entries:
             e.title = translate(e.title)
-            e.meta = translate(e.meta)
+            e.meta = split_date_location(translate(e.meta))
             e.bullets = [translate(b) for b in e.bullets]
 
     # Extract tech skills from experience + projects bullets.

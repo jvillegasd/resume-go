@@ -68,13 +68,15 @@
   }
 }
 
-% Extra top space (6pt) between job entries — diverges from upstream's -2pt
-% to give breathing room between roles.
+% Layout matches jakegut/resume; only \vspace{6pt} on the top differs
+% from upstream's -2pt to give breathing room between roles.
+% Args: #1 company, #2 date range, #3 role title, #4 location.
+% Row 1: company (bold) | location (right, regular). Row 2: title | date (right, italic).
 \newcommand{\resumeSubheading}[4]{
   \vspace{6pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
-      \textit{\small#3} & \textit{\small #4} \\
+      \textbf{#1} & #4 \\
+      \textit{\small#3} & \textit{\small #2} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -110,9 +112,6 @@
 %----------HEADING----------
 \begin{center}
     \textbf{\Huge \scshape ((( name )))} \\ \vspace{6pt}
-    ((* if headline or location *))
-    \small ((( headline )))((* if location *)) $|$ ((( location )))((* endif *)) \\ \vspace{5pt}
-    ((* endif *))
     ((* if contacts *))
     \small
     ((* for c in contacts *))\href{((( c.url )))}{((( c.label )))}((* if not loop.last *)) $|$ ((* endif *))((* endfor *))

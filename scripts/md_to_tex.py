@@ -35,8 +35,7 @@ def tex_escape(s: str) -> str:
 def classify_contact(c: str) -> dict:
     """Return {label, url} for a contact line.
     Email → mailto: link, label is the address.
-    linkedin.com / github.com → branded label, label-only display.
-    Other URL → host-derived label.
+    URLs → display as a readable host/path label without scheme.
     The url goes inside \\href{...} verbatim (no tex escaping); the label
     is tex-escaped at template-context time.
     """
@@ -44,13 +43,9 @@ def classify_contact(c: str) -> dict:
     if "@" in c and "/" not in c:
         return {"label": c, "url": f"mailto:{c}"}
     url = c if c.startswith(("http://", "https://")) else f"https://{c}"
-    low = c.lower()
-    if "linkedin.com" in low:
-        return {"label": "LinkedIn", "url": url}
-    if "github.com" in low:
-        return {"label": "GitHub", "url": url}
-    m = re.search(r"([a-z0-9-]+)\.[a-z]{2,}", low)
-    return {"label": (m.group(1).capitalize() if m else c), "url": url}
+    label = re.sub(r"^https?://", "", c, flags=re.IGNORECASE).rstrip("/")
+    label = re.sub(r"^www\.", "", label, flags=re.IGNORECASE)
+    return {"label": label, "url": url}
 
 
 @dataclass
@@ -163,8 +158,14 @@ def split_meta(meta: str) -> tuple[str, str]:
     """Split 'Jan 2022 – Present · San Francisco' into (date, location)."""
     if "·" in meta:
         date, loc = meta.split("·", 1)
-        return date.strip(), loc.strip()
-    return meta.strip(), ""
+        return normalize_date(date), loc.strip()
+    return normalize_date(meta), ""
+
+
+def normalize_date(date: str) -> str:
+    """Drop LinkedIn elapsed-duration parens, keeping only month/year range."""
+    date = re.sub(r"\s*\([^)]*\)", "", date)
+    return re.sub(r"\s+", " ", date).strip()
 
 
 def to_template_ctx(r: Resume) -> dict:
