@@ -120,10 +120,26 @@
 \vspace{6pt}
 
 
-((* if summary *))
-%-----------SUMMARY-----------
-\section{Summary}
-\small{((( summary )))} \vspace{4pt}
+
+
+((* if skill_groups *))
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     ((* for g in skill_groups *))
+     \textbf{((( g.category )))}{: ((( g.skills )))}((* if not loop.last *)) \\((* endif *))
+     ((* endfor *))
+    }}
+ \end{itemize}
+((* elif skills *))
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     ((( skills )))
+    }}
+ \end{itemize}
 ((* endif *))
 
 
@@ -183,27 +199,6 @@
     ((* endif *))
   ((* endfor *))
   \resumeSubHeadingListEnd
-((* endif *))
-
-
-((* if skill_groups *))
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     ((* for g in skill_groups *))
-     \textbf{((( g.category )))}{: ((( g.skills )))}((* if not loop.last *)) \\((* endif *))
-     ((* endfor *))
-    }}
- \end{itemize}
-((* elif skills *))
-%-----------TECHNICAL SKILLS-----------
-\section{Technical Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-     ((( skills )))
-    }}
- \end{itemize}
 ((* endif *))
 
 

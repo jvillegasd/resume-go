@@ -223,6 +223,7 @@ def render_tex(ctx: dict, template_path: Path) -> str:
     return env.get_template(template_path.name).render(**ctx)
 
 
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--input", required=True, type=Path)
