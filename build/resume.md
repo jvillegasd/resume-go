@@ -58,7 +58,8 @@ Results-driven Backend Engineer with over 6 years of experience designing and sc
 ## Skills
 **Languages:** Python, Node.js, PHP, Java
 **Frameworks:** FastAPI, Django, Django-Ninja, Flask, Express.js, Vue.js
-**Cloud & DevOps:** AWS Lambda, AWS SQS, AWS SNS, AWS EventBridge, AWS CDK, AWS AppFlow, AWS Step Functions, AWS DynamoDB, AWS S3, Docker, Kubernetes, GitHub Actions, Coolify
+**Cloud & Infrastructure:** AWS Lambda, AWS SQS, AWS SNS, AWS EventBridge, AWS CDK, AWS AppFlow, AWS Step Functions, AWS DynamoDB, AWS S3, Docker, Kubernetes
+**DevOps:** GitHub Actions, Coolify
 **Observability:** AWS CloudWatch, Datadog
 **Databases:** PostgreSQL, MySQL, Neo4j, MongoDB, Snowflake, RabbitMQ, Redis
 **Fintech APIs:** Plaid, Salesforce, Socure, Encompass, Twilio

@@ -65,7 +65,11 @@ Are the skills listed in order of relevance to the target role (if provided)? Co
 
 Also check: does any single category contain 10+ items (especially AWS services)? Long lists visually bury core languages like Python. Flag if so — recommend splitting or trimming to the most relevant services.
 
+Specific split to recommend when `Cloud & DevOps` contains 10+ items mixing AWS services with container/CI tools: split into `Cloud & Infrastructure` (AWS services + Docker + Kubernetes) and `DevOps` (GitHub Actions, Coolify, Terraform, etc.). This is more scannable for recruiters and surfaces CI/CD tools as a distinct signal.
+
 Also check: does the APIs & Integrations category mix unrelated domains (e.g. fintech + logistics + trading)? If it spans 8+ items across 2+ domains, recommend splitting into domain-specific subcategories (e.g. "Fintech APIs", "Commerce & Trading APIs").
+
+Also check: does any skills category list more than 13 items? Flag it regardless of type — even well-named categories become noise at that length.
 
 **4. Specialization Consistency**
 Does the narrative across all roles reinforce a single clear specialization (e.g. backend, platform, MLOps, fintech)? Or does it scatter focus across unrelated domains?
@@ -216,6 +220,7 @@ Only write to `build/resume.md` after the final confirmation.
 
 - **Never invent metrics, percentages, scope, promotions, or ownership claims.**
 - **Never use Unicode arrows (`→`) in bullets** — ATS parsers may strip or misread them. Use "to" instead (e.g. "~11 min to ~480ms").
+- **Never recommend contact icons** (phone emoji, envelope icon, etc.) — require LaTeX icon packages that introduce ATS parsing risk. Plain text contact info is safer.
 - If a metric is missing, use directional language ("significantly reduced", "meaningfully improved") or explicitly flag it as needing real data.
 - Preserve all truthful claims — only improve framing and language.
 - Do not change job titles, company names, or dates.
