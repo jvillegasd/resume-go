@@ -8,6 +8,7 @@ Results-driven Backend Engineer with over 6 years of experience designing and sc
 ## Education
 ### Universidad del Norte - Bachelor of Engineering - BE, Computer Science
 *January 2016 - February 2021*
+- Capstone: Built an arrhythmia detection system using stacked ML models (LDA + MLP) achieving 89% accuracy on the MIT-BIH database - deployed REST APIs on AWS EC2 with a Vue.js SPA on AWS S3.
 
 ## Experience
 ### Quantum Lending Solutions - Software Engineer
@@ -37,7 +38,7 @@ Results-driven Backend Engineer with over 6 years of experience designing and sc
 
 ### Leanware - Software Engineer
 *August 2021 - April 2022 · Barranquilla, Atlantico, Colombia*
-- Built a PDF generation web app that batch-processes CSV input to populate document templates using Node.js on GCP, saving users ~2 hours per batch.
+- Delivered a PDF generation web app that batch-processes CSV input to populate document templates using Node.js on GCP, saving users ~2 hours per batch.
 - Shipped a secure file hosting service for sensitive customer documents with end-to-end encryption using AWS KMS, Python, Flask, and AWS Serverless - eliminating reliance on third-party storage for regulated data.
 - Shipped a near real-time algorithmic trading bot with 4 custom strategies - integrating Polygon, InteractiveBrokers, and TradingView webhooks for signal processing and order execution at ~650ms per signal using Python and AWS Serverless.
 
