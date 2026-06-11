@@ -65,6 +65,8 @@ Are the skills listed in order of relevance to the target role (if provided)? Co
 
 Also check: does any single category contain 10+ items (especially AWS services)? Long lists visually bury core languages like Python. Flag if so — recommend splitting or trimming to the most relevant services.
 
+Also check: does the APIs & Integrations category mix unrelated domains (e.g. fintech + logistics + trading)? If it spans 8+ items across 2+ domains, recommend splitting into domain-specific subcategories (e.g. "Fintech APIs", "Commerce & Trading APIs").
+
 **4. Specialization Consistency**
 Does the narrative across all roles reinforce a single clear specialization (e.g. backend, platform, MLOps, fintech)? Or does it scatter focus across unrelated domains?
 - Alta if roles contradict each other or signal unclear career direction.
@@ -157,6 +159,8 @@ Rules for suggestions:
 
 Triggered when the user says: "drill into [Company]", "improve [role]", "go point by point on [section]".
 
+**Source code access:** If the user provides a GitHub repo URL for a project in the bullet being reviewed, use `gh api repos/{owner}/{repo}/contents/{path}` to read the source code and write a technically accurate rewrite. Focus on: use cases, domain models, validators, README. A bullet grounded in actual code is far more credible than one inferred from a description.
+
 Process bullets **one at a time**, interactively. Do NOT show all bullets at once.
 
 For each bullet, show:
@@ -211,6 +215,7 @@ Only write to `build/resume.md` after the final confirmation.
 ## Guardrails
 
 - **Never invent metrics, percentages, scope, promotions, or ownership claims.**
+- **Never use Unicode arrows (`→`) in bullets** — ATS parsers may strip or misread them. Use "to" instead (e.g. "~11 min to ~480ms").
 - If a metric is missing, use directional language ("significantly reduced", "meaningfully improved") or explicitly flag it as needing real data.
 - Preserve all truthful claims — only improve framing and language.
 - Do not change job titles, company names, or dates.
