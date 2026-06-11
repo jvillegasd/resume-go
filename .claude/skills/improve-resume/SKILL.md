@@ -154,9 +154,13 @@ Rules for suggestions:
 
 Triggered when the user says: "drill into [Company]", "improve [role]", "go point by point on [section]".
 
-For each bullet in the targeted role:
+Process bullets **one at a time**, interactively. Do NOT show all bullets at once.
+
+For each bullet, show:
 
 ```
+**Bullet X of N — [Company]**
+
 **Original:**
 > [exact original bullet text]
 
@@ -165,10 +169,39 @@ For each bullet in the targeted role:
 
 **Why:** [one sentence explaining the improvement]
 
-⚠️ *Needs data: [what metric or fact is required to complete the rewrite]*
+⚠️ *Needs data: [what metric or fact is required to complete the rewrite]*  ← omit if no data needed
+
+Apply this bullet? (yes / no / edit)
 ```
 
-Show all bullets for the role. Flag any that cannot be improved without real data from the user. At the end, offer to apply all proposed bullets if the user confirms the data for flagged ones.
+If the proposed bullet has a `⚠️ Needs data` flag, **do not show the apply prompt yet**. Instead, ask the specific question directly:
+
+```
+⚠️ Before applying: [specific question about the missing data — e.g. "What did these microservices handle — loan servicing, credit scoring, payments?"]
+```
+
+Wait for the user's answer, fold it into the proposed bullet, show the updated version, then ask:
+
+```
+Apply this bullet? (yes / no / edit)
+```
+
+Then wait for the user's response before showing the next bullet.
+
+- **yes** — mark as accepted, move to next bullet
+- **no** — keep original, move to next bullet
+- **edit** — user provides a correction; incorporate it, show the updated version, and ask again
+
+After all bullets are reviewed, show a summary:
+
+```
+**Deep-Dive Complete — [Company]**
+X bullets accepted · Y kept as-is · Z edited
+
+Apply all accepted bullets to build/resume.md? (yes / no)
+```
+
+Only write to `build/resume.md` after the final confirmation.
 
 ---
 
