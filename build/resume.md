@@ -25,8 +25,8 @@ Results-driven Backend Engineer with over 6 years of experience designing and sc
 
 ### Camino Financial — Software Engineer
 *February 2023 – February 2024 · Los Angeles, California, United States*
-- Maintained and extended the legacy Django Back Office system for the Credit team, resolving bugs and shipping features that unblocked loan processing workflows.
-- Designed and implemented a new event-driven architecture using AWS EventBridge and CDK, decoupling services and improving system reliability.
+- Maintained and extended the legacy Django Back Office system for the Credit team, shipping features and resolving bugs that meaningfully unblocked loan processing workflows.
+- Designed and implemented an event-driven architecture using AWS EventBridge and CDK, decoupling platform services and meaningfully improving system reliability.
 - Shipped financial core microservices for Plaid and Socure integrations, lead management, and Salesforce sync — enabling automated fraud score routing to Salesforce lead objects via AWS EventBridge.
 - Improved microservices observability using AWS Powertools, reducing root cause identification time from 3–4 hours to 30–45 minutes per incident.
 - Delivered a serverless pipeline via AWS Lambda, Step Functions, and EventBridge that processes CSV files to generate targeted Plaid-linked campaign URLs — enabling the marketing team to launch their first automated loan campaigns.
@@ -38,21 +38,21 @@ Results-driven Backend Engineer with over 6 years of experience designing and sc
 ### Leanware — Software Engineer
 *August 2021 – April 2022 · Barranquilla, Atlántico, Colombia*
 - Built a PDF generation web app that batch-processes CSV input to populate document templates using Node.js on GCP, saving users ~2 hours per batch.
-- Built a secure file hosting service for sensitive customer documents using end-to-end encryption with AWS KMS, Python, Flask, and AWS Serverless.
-- Built a near real-time algorithmic trading bot with 4 custom strategies, integrating Polygon, InteractiveBrokers, and TradingView webhooks for signal processing and order placement at ~650ms per signal using Python and AWS Serverless.
+- Shipped a secure file hosting service for sensitive customer documents with end-to-end encryption using AWS KMS, Python, Flask, and AWS Serverless — eliminating reliance on third-party storage for regulated data.
+- Shipped a near real-time algorithmic trading bot with 4 custom strategies — integrating Polygon, InteractiveBrokers, and TradingView webhooks for signal processing and order execution at ~650ms per signal using Python and AWS Serverless.
 
 ### ISWE GROUP — Software Engineer
 *June 2020 – April 2022 · Buenos Aires Province, Argentina*
 - Built a web scraper that automates FDA Priority Notice webform submissions using Python, Selenium, and RQ — increasing throughput from 1 to 4 submissions per 15 minutes and freeing staff to focus on order processing.
-- Built a vehicle broker prototype enabling insurance quote generation by integrating Argentinian SOAP insurance services using Python, Flask, Vue.js, and PostgreSQL.
-- Built an inventory management system integrated with Shopify for product tracking and order fulfillment, generating shipping labels via FedEx, DHL, and UPS APIs — helping scale order processing from 10 to 40+ orders per day alongside the FDA automation using Python, Flask, Vue.js, and MongoDB.
+- Shipped a vehicle broker prototype enabling real-time insurance quote generation by integrating Argentinian SOAP insurance APIs using Python, Flask, Vue.js, and PostgreSQL.
+- Shipped an inventory management system integrated with Shopify for product tracking and order fulfillment, generating shipping labels via FedEx, DHL, and UPS APIs — scaling order processing from 10 to 40+ orders/day using Python, Flask, Vue.js, and MongoDB.
 - Extended the inventory management system with multi-store support, enabling creation and management of Shopify store clusters.
 
 ### City Lending Inc — Back End Developer
 *October 2019 – May 2020 · Barranquilla, Atlántico, Colombia*
-- Automated loan processing and status update workflows for the financial team by integrating the Encompass API using Python and AWS Serverless.
-- Built internal loan officer tooling and REST API integrations with the Encompass API using Python, PHP, and AWS Serverless.
-- Built a custom Salesforce Lightning chat component integrated with Twilio, used by all loan officers for lead follow-up — implementing webhooks, lead data sanitization, automated loan officer assignment, and dashboards for data visualization using Apex, Node.js, and AWS Serverless.
+- Automated loan processing and status update workflows for the financial team via Encompass API integration using Python and AWS Serverless — eliminating manual status tracking.
+- Shipped internal loan officer tooling and REST API integrations with the Encompass API using Python, PHP, and AWS Serverless — streamlining daily workflows for the originations team.
+- Shipped a custom Salesforce Lightning chat component integrated with Twilio — used by all loan officers for lead follow-up, with automated assignment, lead sanitization, and data visualization dashboards using Apex, Node.js, and AWS Serverless.
 
 ## Skills
 **Languages:** Python, Node.js, PHP, Java
