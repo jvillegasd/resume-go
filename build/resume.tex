@@ -1,0 +1,208 @@
+%-------------------------
+% Resume in LaTeX
+% Source : https://github.com/jakegut/resume (MIT)
+% Author : Jake Gutierrez (based on https://github.com/sb2nov/resume)
+% Rendered by scripts/md_to_tex.py — see that file for Jinja delimiters.
+%-------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable / ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+% Layout matches jakegut/resume; only \vspace{6pt} on the top differs
+% from upstream's -2pt to give breathing room between roles.
+% Args: #1 company, #2 date range, #3 role title, #4 location.
+% Row 1: company (bold) | location (right, regular). Row 2: title | date (right, italic).
+\newcommand{\resumeSubheading}[4]{
+  \vspace{6pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #4 \\
+      \textit{\small#3} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Johnny Villegas} \\ \vspace{6pt}
+    \small
+\href{mailto:johnnyvillegaslrs@gmail.com}{johnnyvillegaslrs@gmail.com} $|$ \href{https://www.linkedin.com/in/jvillegasd}{linkedin.com/in/jvillegasd} $|$ \href{https://github.com/jvillegasd}{github.com/jvillegasd}\end{center}
+\vspace{6pt}
+
+
+
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Cloud \& DevOps}{: AWS, AWS API Gateway, AWS AppFlow, AWS CDK, AWS DynamoDB, AWS EventBridge, AWS Lambda, AWS Powertools, AWS S3, AWS SNS, AWS SQS, AWS Step Functions, Docker} \\     \textbf{APIs \& Integrations}{: DHL, Encompass, FedEx, InteractiveBrokers, Plaid, Polygon, Salesforce, Shopify, Socure, TradingView, Twilio, UPS} \\     \textbf{Frameworks}{: Django, Django-Ninja, Express.js, FastAPI, Flask, Vue.js} \\     \textbf{Testing \& Tools}{: Cryptography, Moto, Pytest, RQ, Selenium} \\     \textbf{Databases}{: MongoDB, MySQL, Neo4j, PostgreSQL, RabbitMQ, Redis, Snowflake} \\     \textbf{Languages}{: Java, Node.js, PHP, Python}    }}
+ \end{itemize}
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Quantum Lending Solutions}{February 2024 - Present}
+      {Software Engineer}{Reston, Virginia, United States}
+      \resumeItemListStart
+        \resumeItem{Built and maintained financial core services covering loan origination, fraud detection, partner application management, cashflow analysis, and transaction processing (Plaid, MoneyThumb, HyperVerge) using Python, FastAPI, and Django-Ninja on AWS.}
+        \resumeItem{Built an in-house fraud detection service using Neo4j to identify fraudulent loan applications by mapping connections across shared attributes (email, phone, SSN, EIN, addresses, IPs) — integrating PostgreSQL, MySQL, and Snowflake as data sources with graph visualizations and PDF reports via FastAPI.}
+        \resumeItem{Optimized Cypher queries for edge-case fraud graph traversals, reducing execution time from \textasciitilde{}11 minutes to \textasciitilde{}480ms.}
+        \resumeItem{Built a Plaid-powered payment processor microservice integrated with the legacy Back Office system, reducing overdue portfolio.}
+        \resumeItem{Created an event-driven architecture using RabbitMQ, AWS SQS/SNS, and Kubernetes, improving system throughput and decoupling.}
+        \resumeItem{Automated Salesforce data ingestion via AWS AppFlow, eliminating manual data transfer processes.}
+        \resumeItem{Optimized API endpoints and SQL queries, reducing response latency from \textasciitilde{}15 minutes to \textasciitilde{}600ms.}
+        \resumeItem{Designed and implemented a pre-underwriting readiness service that automatically evaluates loan applications and bank statements, eliminating manual pre-underwriter checks.}
+        \resumeItem{Led code reviews across the platform team, enforcing design patterns that reduced regression incidents in production.}
+        \resumeItem{Raised test coverage across platform services using Pytest and Moto, reducing production regressions.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Camino Financial}{February 2023 - February 2024}
+      {Software Engineer}{Los Angeles, California, United States}
+      \resumeItemListStart
+        \resumeItem{Maintained and extended the legacy Django Back Office system for the Credit team, resolving bugs and shipping features that unblocked loan processing workflows.}
+        \resumeItem{Designed and implemented a new event-driven architecture using AWS EventBridge and CDK, decoupling services and improving system reliability.}
+        \resumeItem{Built financial core microservices for Plaid and Socure integrations, lead management, and Salesforce sync — routing fraud scores to Salesforce lead objects via AWS EventBridge.}
+        \resumeItem{Improved microservices observability using AWS Powertools, reducing root cause identification time from 3–4 hours to 30–45 minutes per incident.}
+        \resumeItem{Built a serverless pipeline that processes CSV files to generate targeted marketing campaign links with Plaid and Salesforce integrations via AWS Lambda, Step Functions, and EventBridge — enabling the marketing team to launch campaigns for the first time.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Globant}{May 2022 - January 2023}
+      {Software Engineer}{Barranquilla, Atlántico, Colombia}
+      \resumeItemListStart
+        \resumeItem{Built a microservice that evaluates ML model outputs through a decisioning tree and returns human-readable explanations of candidate-to-job compatibility scores using Python, FastAPI, and AWS.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Leanware}{August 2021 - April 2022}
+      {Software Engineer}{Barranquilla, Atlántico, Colombia}
+      \resumeItemListStart
+        \resumeItem{Built a PDF generation web app that batch-processes CSV input to populate document templates using Node.js on GCP, saving users \textasciitilde{}2 hours per batch.}
+        \resumeItem{Built a secure file hosting service for sensitive customer documents using end-to-end encryption with AWS KMS, Python, Flask, and AWS Serverless.}
+        \resumeItem{Built a near real-time algorithmic trading bot with 4 custom strategies, integrating Polygon, InteractiveBrokers, and TradingView webhooks for signal processing and order placement at \textasciitilde{}650ms per signal using Python and AWS Serverless.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {ISWE GROUP}{June 2020 - April 2022}
+      {Software Engineer}{Buenos Aires Province, Argentina}
+      \resumeItemListStart
+        \resumeItem{Built a web scraper that automates FDA Priority Notice webform submissions using Python, Selenium, and RQ — increasing throughput from 1 to 4 submissions per 15 minutes and freeing staff to focus on order processing.}
+        \resumeItem{Built a vehicle broker prototype enabling insurance quote generation by integrating Argentinian SOAP insurance services using Python, Flask, Vue.js, and PostgreSQL.}
+        \resumeItem{Built an inventory management system integrated with Shopify for product tracking and order fulfillment, generating shipping labels via FedEx, DHL, and UPS APIs — helping scale order processing from 10 to 40+ orders per day alongside the FDA automation using Python, Flask, Vue.js, and MongoDB.}
+        \resumeItem{Extended the inventory management system with multi-store support, enabling creation and management of Shopify store clusters.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {City Lending Inc}{October 2019 - May 2020}
+      {Back End Developer}{Barranquilla, Atlántico, Colombia}
+      \resumeItemListStart
+        \resumeItem{Automated loan processing and status update workflows for the financial team by integrating the Encompass API using Python and AWS Serverless.}
+        \resumeItem{Built internal loan officer tooling and REST API integrations with the Encompass API using Python, PHP, and AWS Serverless.}
+        \resumeItem{Built a custom Salesforce Lightning chat component integrated with Twilio, used by all loan officers for lead follow-up — implementing webhooks, lead data sanitization, automated loan officer assignment, and dashboards for data visualization using Apex, Node.js, and AWS Serverless.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Universidad del Norte}{January 2016 – February 2021}
+      {Bachelor of Engineering - BE, Computer Science}{}
+  \resumeSubHeadingListEnd
+
+
+
+
+
+
+
+
+%-------------------------------------------
+\end{document}

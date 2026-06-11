@@ -1,7 +1,19 @@
-build/
 __pycache__/
 *.pyc
 .venv/
 .DS_Store
 *.egg-info/
 Profile.pdf
+
+# LaTeX build artifacts
+build/*.aux
+build/*.fdb_latexmk
+build/*.fls
+build/*.log
+build/*.out
+
+# Generated preview image
+build/resume-p1.png
+
+# Draft files
+build/linkedin_optimized.draft.md
