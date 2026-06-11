@@ -14,11 +14,11 @@ Results-driven Backend Engineer with over 6 years of experience designing and sc
 *February 2024 – Present · Reston, Virginia, United States*
 - Building and maintaining financial core services across loan origination, fraud detection, cashflow analysis, and payment processing (Plaid, MoneyThumb, HyperVerge) — serving ~14K loan applications/month (~$32M disbursed monthly) using Python, FastAPI, and Django-Ninja on AWS.
 - Built an in-house graph-based fraud detection service using Neo4j to surface connected fraudulent applications across shared attributes (email, SSN, EIN, IPs) — integrating PostgreSQL, MySQL, and Snowflake with graph-visual PDF reports via FastAPI, meaningfully reducing manual fraud review overhead.
-- Optimized Cypher queries for edge-case fraud graph traversals, cutting execution time by 99% (~11 min → ~480ms).
+- Optimized Cypher queries for edge-case fraud graph traversals, cutting execution time by 99% (~11 min to ~480ms).
 - Built a Plaid-powered payment processor microservice integrated with the legacy Back Office system, reducing overdue portfolio by 20–30%.
 - Designed an event-driven architecture using RabbitMQ, AWS SQS/SNS, and Kubernetes, improving system throughput and decoupling 15+ platform services.
 - Automated Salesforce data ingestion via AWS AppFlow, eliminating manual data transfers and saving the ops team ~5 hours/week.
-- Optimized API endpoints and SQL queries, reducing response latency by 99% (~15 min → ~600ms) across core platform services.
+- Optimized API endpoints and SQL queries, reducing response latency by 99% (~15 min to ~600ms) across core platform services.
 - Built a FastAPI service that automatically runs 6 bank-statement validation checks (data coverage, name/address match, balance continuity, revenue consistency) via SNS triggers — replacing manual pre-underwriter review, publishing a downstream readiness event, and exposing results via REST API.
 - Led code reviews across the platform team, enforcing design patterns that meaningfully reduced production regression incidents.
 - Raised test coverage across platform services from 30% to 90%+ using Pytest and Moto, reducing production regressions.
@@ -57,10 +57,11 @@ Results-driven Backend Engineer with over 6 years of experience designing and sc
 ## Skills
 **Languages:** Python, Node.js, PHP, Java
 **Frameworks:** FastAPI, Django, Django-Ninja, Flask, Express.js, Vue.js
-**Cloud & DevOps:** AWS Lambda, AWS SQS, AWS SNS, AWS EventBridge, AWS CDK, AWS AppFlow, AWS Step Functions, AWS DynamoDB, AWS S3, Docker, Kubernetes
+**Cloud & DevOps:** AWS Lambda, AWS SQS, AWS SNS, AWS EventBridge, AWS CDK, AWS AppFlow, AWS Step Functions, AWS DynamoDB, AWS S3, Docker, Kubernetes, GitHub Actions, Coolify
 **Databases:** PostgreSQL, MySQL, Neo4j, MongoDB, Snowflake, RabbitMQ, Redis
-**APIs & Integrations:** Plaid, Salesforce, Socure, Encompass, Twilio, Shopify, InteractiveBrokers, Polygon, TradingView, FedEx, DHL, UPS
-**Testing & Tools:** Pytest, Moto, Selenium, RQ, Cryptography
+**Fintech APIs:** Plaid, Salesforce, Socure, Encompass, Twilio
+**Commerce & Trading APIs:** Shopify, InteractiveBrokers, Polygon, TradingView, FedEx, DHL, UPS
+**Testing & Tools:** Pytest, Moto, LocalStack, MinIO, Selenium, RQ, Cryptography
 
 ## Honors & Awards
 ### ACM-ICPC Latin America 2018 Programming contest

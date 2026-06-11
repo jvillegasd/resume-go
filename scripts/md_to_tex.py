@@ -21,7 +21,7 @@ LATEX_ESCAPES = {
     "\\": r"\textbackslash{}",
     "&": r"\&", "%": r"\%", "$": r"\$", "#": r"\#",
     "_": r"\_", "{": r"\{", "}": r"\}",
-    "~": r"\textasciitilde{}", "^": r"\textasciicircum{}",
+    "~": r"$\sim$", "^": r"\textasciicircum{}",
 }
 
 
