@@ -84,7 +84,7 @@ SKILL_CATEGORIES: dict[str, list[str]] = {
         "AWS SQS", "AWS SNS", "AWS AppFlow", "AWS", "GCP", "Docker",
         "Kubernetes", "Terraform", "GitHub Actions", "Serverless", "CI/CD",
     ],
-    "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Redis", "RabbitMQ"],
+    "Databases": ["PostgreSQL", "MongoDB", "MySQL", "Neo4j", "Redis", "RabbitMQ", "Snowflake"],
     "APIs & Integrations": [
         "Salesforce", "Plaid", "Twilio", "Polygon", "InteractiveBrokers",
         "TradingView", "Shopify", "Encompass", "Socure", "FedEx", "DHL",
