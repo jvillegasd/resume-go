@@ -114,7 +114,7 @@
     \textbf{\Huge \scshape ((( name )))} \\ \vspace{6pt}
     ((* if contacts *))
     \small
-    ((* for c in contacts *))\href{((( c.url )))}{((( c.label )))}((* if not loop.last *)) $|$ ((* endif *))((* endfor *))
+    ((* for c in contacts *))((* if c.url *))\href{((( c.url )))}{((( c.label )))}((* else *))((( c.label )))((* endif *))((* if not loop.last *)) $|$ ((* endif *))((* endfor *))
     ((* endif *))
 \end{center}
 \vspace{6pt}

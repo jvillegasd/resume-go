@@ -113,7 +113,7 @@
 \begin{center}
     \textbf{\Huge \scshape Johnny Villegas} \\ \vspace{6pt}
     \small
-\href{mailto:johnnyvillegaslrs@gmail.com}{johnnyvillegaslrs@gmail.com} $|$ \href{https://www.linkedin.com/in/jvillegasd}{linkedin.com/in/jvillegasd} $|$ \href{https://github.com/jvillegasd}{github.com/jvillegasd}\end{center}
+\href{mailto:johnnyvillegaslrs@gmail.com}{johnnyvillegaslrs@gmail.com} $|$ Barranquilla, Colombia $|$ \href{https://www.linkedin.com/in/jvillegasd}{linkedin.com/in/jvillegasd} $|$ \href{https://github.com/jvillegasd}{github.com/jvillegasd}\end{center}
 \vspace{6pt}
 
 
@@ -123,7 +123,7 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Cloud \& DevOps}{: AWS, AWS API Gateway, AWS AppFlow, AWS CDK, AWS DynamoDB, AWS EventBridge, AWS Lambda, AWS Powertools, AWS S3, AWS SNS, AWS SQS, AWS Step Functions, Docker} \\     \textbf{APIs \& Integrations}{: DHL, Encompass, FedEx, InteractiveBrokers, Plaid, Polygon, Salesforce, Shopify, Socure, TradingView, Twilio, UPS} \\     \textbf{Frameworks}{: Django, Django-Ninja, Express.js, FastAPI, Flask, Vue.js} \\     \textbf{Testing \& Tools}{: Cryptography, Moto, Pytest, RQ, Selenium} \\     \textbf{Databases}{: MongoDB, MySQL, Neo4j, PostgreSQL, RabbitMQ, Redis, Snowflake} \\     \textbf{Languages}{: Java, Node.js, PHP, Python}    }}
+     \textbf{Languages}{: Python, Node.js, PHP, Java} \\     \textbf{Frameworks}{: FastAPI, Django, Django-Ninja, Flask, Express.js, Vue.js} \\     \textbf{Cloud \& DevOps}{: AWS Lambda, AWS SQS, AWS SNS, AWS EventBridge, AWS CDK, AWS AppFlow, AWS Step Functions, AWS DynamoDB, AWS S3, Docker, Kubernetes} \\     \textbf{Databases}{: PostgreSQL, MySQL, Neo4j, MongoDB, Snowflake, RabbitMQ, Redis} \\     \textbf{APIs \& Integrations}{: Plaid, Salesforce, Socure, Encompass, Twilio, Shopify, InteractiveBrokers, Polygon, TradingView, FedEx, DHL, UPS} \\     \textbf{Testing \& Tools}{: Pytest, Moto, Selenium, RQ, Cryptography}    }}
  \end{itemize}
 
 
@@ -131,38 +131,38 @@
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Quantum Lending Solutions}{February 2024 - Present}
+      {Quantum Lending Solutions}{February 2024 – Present}
       {Software Engineer}{Reston, Virginia, United States}
       \resumeItemListStart
-        \resumeItem{Built and maintained financial core services covering loan origination, fraud detection, partner application management, cashflow analysis, and transaction processing (Plaid, MoneyThumb, HyperVerge) using Python, FastAPI, and Django-Ninja on AWS.}
-        \resumeItem{Built an in-house fraud detection service using Neo4j to identify fraudulent loan applications by mapping connections across shared attributes (email, phone, SSN, EIN, addresses, IPs) — integrating PostgreSQL, MySQL, and Snowflake as data sources with graph visualizations and PDF reports via FastAPI.}
-        \resumeItem{Optimized Cypher queries for edge-case fraud graph traversals, reducing execution time from \textasciitilde{}11 minutes to \textasciitilde{}480ms.}
-        \resumeItem{Built a Plaid-powered payment processor microservice integrated with the legacy Back Office system, reducing overdue portfolio.}
-        \resumeItem{Created an event-driven architecture using RabbitMQ, AWS SQS/SNS, and Kubernetes, improving system throughput and decoupling.}
-        \resumeItem{Automated Salesforce data ingestion via AWS AppFlow, eliminating manual data transfer processes.}
-        \resumeItem{Optimized API endpoints and SQL queries, reducing response latency from \textasciitilde{}15 minutes to \textasciitilde{}600ms.}
-        \resumeItem{Designed and implemented a pre-underwriting readiness service that automatically evaluates loan applications and bank statements, eliminating manual pre-underwriter checks.}
-        \resumeItem{Led code reviews across the platform team, enforcing design patterns that reduced regression incidents in production.}
-        \resumeItem{Raised test coverage across platform services using Pytest and Moto, reducing production regressions.}
+        \resumeItem{Building and maintaining financial core services across loan origination, fraud detection, cashflow analysis, and payment processing (Plaid, MoneyThumb, HyperVerge) — serving \textasciitilde{}14K loan applications/month (\textasciitilde{}\$32M disbursed monthly) using Python, FastAPI, and Django-Ninja on AWS.}
+        \resumeItem{Built an in-house graph-based fraud detection service using Neo4j to surface connected fraudulent applications across shared attributes (email, SSN, EIN, IPs) — integrating PostgreSQL, MySQL, and Snowflake with graph-visual PDF reports via FastAPI, meaningfully reducing manual fraud review overhead.}
+        \resumeItem{Optimized Cypher queries for edge-case fraud graph traversals, cutting execution time by 99\% (\textasciitilde{}11 min → \textasciitilde{}480ms).}
+        \resumeItem{Built a Plaid-powered payment processor microservice integrated with the legacy Back Office system, reducing overdue portfolio by 20–30\%.}
+        \resumeItem{Designed an event-driven architecture using RabbitMQ, AWS SQS/SNS, and Kubernetes, improving system throughput and decoupling 15+ platform services.}
+        \resumeItem{Automated Salesforce data ingestion via AWS AppFlow, eliminating manual data transfers and saving the ops team \textasciitilde{}5 hours/week.}
+        \resumeItem{Optimized API endpoints and SQL queries, reducing response latency by 99\% (\textasciitilde{}15 min → \textasciitilde{}600ms) across core platform services.}
+        \resumeItem{Built a FastAPI service that automatically runs 6 bank-statement validation checks (data coverage, name/address match, balance continuity, revenue consistency) via SNS triggers — replacing manual pre-underwriter review, publishing a downstream readiness event, and exposing results via REST API.}
+        \resumeItem{Led code reviews across the platform team, enforcing design patterns that meaningfully reduced production regression incidents.}
+        \resumeItem{Raised test coverage across platform services from 30\% to 90\%+ using Pytest and Moto, reducing production regressions.}
       \resumeItemListEnd
     \resumeSubheading
-      {Camino Financial}{February 2023 - February 2024}
+      {Camino Financial}{February 2023 – February 2024}
       {Software Engineer}{Los Angeles, California, United States}
       \resumeItemListStart
         \resumeItem{Maintained and extended the legacy Django Back Office system for the Credit team, resolving bugs and shipping features that unblocked loan processing workflows.}
         \resumeItem{Designed and implemented a new event-driven architecture using AWS EventBridge and CDK, decoupling services and improving system reliability.}
-        \resumeItem{Built financial core microservices for Plaid and Socure integrations, lead management, and Salesforce sync — routing fraud scores to Salesforce lead objects via AWS EventBridge.}
+        \resumeItem{Shipped financial core microservices for Plaid and Socure integrations, lead management, and Salesforce sync — enabling automated fraud score routing to Salesforce lead objects via AWS EventBridge.}
         \resumeItem{Improved microservices observability using AWS Powertools, reducing root cause identification time from 3–4 hours to 30–45 minutes per incident.}
-        \resumeItem{Built a serverless pipeline that processes CSV files to generate targeted marketing campaign links with Plaid and Salesforce integrations via AWS Lambda, Step Functions, and EventBridge — enabling the marketing team to launch campaigns for the first time.}
+        \resumeItem{Delivered a serverless pipeline via AWS Lambda, Step Functions, and EventBridge that processes CSV files to generate targeted Plaid-linked campaign URLs — enabling the marketing team to launch their first automated loan campaigns.}
       \resumeItemListEnd
     \resumeSubheading
-      {Globant}{May 2022 - January 2023}
+      {Globant}{May 2022 – January 2023}
       {Software Engineer}{Barranquilla, Atlántico, Colombia}
       \resumeItemListStart
-        \resumeItem{Built a microservice that evaluates ML model outputs through a decisioning tree and returns human-readable explanations of candidate-to-job compatibility scores using Python, FastAPI, and AWS.}
+        \resumeItem{Shipped a Python/FastAPI microservice for a staffing-tech client that evaluates ML model outputs through a decisioning tree, returning human-readable candidate-to-job compatibility explanations at scale.}
       \resumeItemListEnd
     \resumeSubheading
-      {Leanware}{August 2021 - April 2022}
+      {Leanware}{August 2021 – April 2022}
       {Software Engineer}{Barranquilla, Atlántico, Colombia}
       \resumeItemListStart
         \resumeItem{Built a PDF generation web app that batch-processes CSV input to populate document templates using Node.js on GCP, saving users \textasciitilde{}2 hours per batch.}
@@ -170,7 +170,7 @@
         \resumeItem{Built a near real-time algorithmic trading bot with 4 custom strategies, integrating Polygon, InteractiveBrokers, and TradingView webhooks for signal processing and order placement at \textasciitilde{}650ms per signal using Python and AWS Serverless.}
       \resumeItemListEnd
     \resumeSubheading
-      {ISWE GROUP}{June 2020 - April 2022}
+      {ISWE GROUP}{June 2020 – April 2022}
       {Software Engineer}{Buenos Aires Province, Argentina}
       \resumeItemListStart
         \resumeItem{Built a web scraper that automates FDA Priority Notice webform submissions using Python, Selenium, and RQ — increasing throughput from 1 to 4 submissions per 15 minutes and freeing staff to focus on order processing.}
@@ -179,7 +179,7 @@
         \resumeItem{Extended the inventory management system with multi-store support, enabling creation and management of Shopify store clusters.}
       \resumeItemListEnd
     \resumeSubheading
-      {City Lending Inc}{October 2019 - May 2020}
+      {City Lending Inc}{October 2019 – May 2020}
       {Back End Developer}{Barranquilla, Atlántico, Colombia}
       \resumeItemListStart
         \resumeItem{Automated loan processing and status update workflows for the financial team by integrating the Encompass API using Python and AWS Serverless.}

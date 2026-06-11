@@ -36,12 +36,16 @@ def classify_contact(c: str) -> dict:
     """Return {label, url} for a contact line.
     Email → mailto: link, label is the address.
     URLs → display as a readable host/path label without scheme.
+    Plain text (e.g. city/country with no domain dot) → no href, label only.
     The url goes inside \\href{...} verbatim (no tex escaping); the label
     is tex-escaped at template-context time.
     """
     c = c.strip()
     if "@" in c and "/" not in c:
         return {"label": c, "url": f"mailto:{c}"}
+    # Plain text: no dot that looks like a domain TLD and no scheme
+    if not c.startswith(("http://", "https://")) and "." not in c:
+        return {"label": c, "url": None}
     url = c if c.startswith(("http://", "https://")) else f"https://{c}"
     label = re.sub(r"^https?://", "", c, flags=re.IGNORECASE).rstrip("/")
     label = re.sub(r"^www\.", "", label, flags=re.IGNORECASE)

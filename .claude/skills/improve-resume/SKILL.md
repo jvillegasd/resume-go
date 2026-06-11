@@ -63,6 +63,8 @@ Are the skills listed in order of relevance to the target role (if provided)? Co
 - Media if order is suboptimal but the content is present.
 - Baja if it's mostly fine with minor reordering needed.
 
+Also check: does any single category contain 10+ items (especially AWS services)? Long lists visually bury core languages like Python. Flag if so — recommend splitting or trimming to the most relevant services.
+
 **4. Specialization Consistency**
 Does the narrative across all roles reinforce a single clear specialization (e.g. backend, platform, MLOps, fintech)? Or does it scatter focus across unrelated domains?
 - Alta if roles contradict each other or signal unclear career direction.
@@ -70,7 +72,7 @@ Does the narrative across all roles reinforce a single clear specialization (e.g
 - Baja if the narrative is consistent with minor drift.
 
 **5. Bullet Consistency**
-Uniform punctuation (all end with period or none do), consistent capitalization, similar line length, same tense (past for past roles, present for current), consistent indentation across all roles.
+Uniform punctuation (all end with period or none do), consistent capitalization, similar line length, same tense (past for past roles, present for current), consistent indentation across all roles. Also check for blank lines between bullets within a role — they break visual flow and can cause rendering issues in LaTeX/ATS.
 - Alta if multiple rules are violated across 3+ companies.
 - Media if isolated violations exist.
 - Baja if only one or two minor inconsistencies.
@@ -147,6 +149,7 @@ Rules for suggestions:
 - If a metric is needed but unknown, write: "Add the [metric type] — e.g. 'reduced X by Y%' — once you have the data."
 - Maximum 3 suggestions per dimension; pick the highest-impact ones.
 - Skip dimensions with no issues — don't force suggestions.
+- Target bullet structure is **Action + Tool + Result** — flag bullets missing any leg of this structure.
 
 ---
 
