@@ -1,14 +1,23 @@
 # resume-go
 
-Turn a LinkedIn-exported `Profile.pdf` into an ATS-optimized single-column
-LaTeX resume (Jake Gutierrez's template, MIT).
+LinkedIn PDF → ATS-optimized single-column LaTeX resume + LinkedIn profile optimizer.
 
-This repo also supports generating an **optimized LinkedIn-profile markdown**
-artifact from either `Profile.pdf` or pasted/exported LinkedIn profile text.
+Uses [Jake Gutierrez's resume template](https://github.com/jakegut/resume) (MIT). Powered by Claude Code skills for AI-assisted tailoring, scoring, and keyword optimization.
 
-## Run (Docker, recommended)
+## What it does
 
-Bundles Python, Java 17, and a minimal TeX Live — only Docker is needed on the host.
+| Goal | How |
+|------|-----|
+| LinkedIn PDF → clean resume markdown | `make md` |
+| Markdown → compiled PDF resume | `make tex` |
+| Score & improve resume content | `/improve-resume` |
+| Tailor resume to a job description | `/tailor-resume` |
+| Optimize for ATS keyword matching | `/resume-ats-optimize` |
+| LinkedIn PDF → optimized LinkedIn copy | `/linkedin-profile-optimize` |
+
+## Quick start (Docker, recommended)
+
+Only Docker required on the host — Python, Java, and TeX Live are bundled in the image.
 
 ```bash
 make build          # one-time: build the image
@@ -18,9 +27,9 @@ make tex            # build/resume.md → build/resume.pdf
 make run
 ```
 
-`make shell` drops you into the container if you want to poke around.
+`make shell` drops you into the container for debugging.
 
-## Run (local Python, alternative)
+## Local Python alternative
 
 Requires Python 3.10+, Java 11+ JRE, and `latexmk`:
 
@@ -32,54 +41,29 @@ python -m venv .venv && source .venv/bin/activate
 pip install -e .
 
 python scripts/pdf_to_md.py --input Profile.pdf --out build/resume.md
-# (optional) hand-edit build/resume.md
+# hand-edit build/resume.md
 python scripts/md_to_tex.py --input build/resume.md --out build/resume.tex --compile
 ```
 
 Final output: `build/resume.pdf`.
 
-## LinkedIn profile optimization
+## Claude Code skills
 
-Generate a LinkedIn-oriented source markdown file from the PDF:
+Install [Claude Code](https://claude.ai/code), then use these slash commands from the project root:
 
-```bash
-make linkedin-source
-# or locally:
-python scripts/profile_to_linkedin_md.py \
-  --input-pdf Profile.pdf \
-  --out build/linkedin_source.md
-```
+| Skill | Trigger | What it does |
+|-------|---------|--------------|
+| `/improve-resume` | `improve my resume` | Scores resume across 11 dimensions, gives copy-ready suggestions |
+| `/tailor-resume` | `tailor for <job>` | Rewrites bullets and skills to match a specific job description |
+| `/resume-ats-optimize` | `ats optimize` | Injects missing ATS keywords without changing voice or structure |
+| `/linkedin-to-ats` | `linkedin to ats` | Converts LinkedIn PDF to ATS-safe resume markdown |
+| `/linkedin-profile-optimize` | `optimize linkedin` | Rewrites LinkedIn sections for discoverability and impact |
 
-Generate the same source markdown from pasted/exported text:
-
-```bash
-python scripts/profile_to_linkedin_md.py \
-  --input-text profile.txt \
-  --out build/linkedin_source.md
-```
-
-After rewriting the copy into an optimized draft, normalize it into the
-canonical final file:
-
-```bash
-python scripts/normalize_linkedin_md.py \
-  --input build/linkedin_optimized.draft.md \
-  --out build/linkedin_optimized.md
-```
-
-The project-local skill
-`.claude/skills/linkedin-profile-optimize/SKILL.md`
-orchestrates the full source → optimize → normalize workflow.
-
-When the extracted source misses important business context, edit
-`build/linkedin_source.md` first, then rerun the optimization flow. This is
-the best place to add clarifications such as project purpose, decision logic,
-domain context, or the human/business meaning of a system's output.
+All skills work from `build/resume.md`. Run `make md` first if you haven't converted your PDF yet.
 
 ## Markdown schema
 
-`scripts/pdf_to_md.py` emits, and `scripts/md_to_tex.py` expects, this exact
-shape — edit between the two steps as needed:
+`scripts/pdf_to_md.py` emits, and `scripts/md_to_tex.py` expects, this shape:
 
 ```markdown
 # Full Name
@@ -105,8 +89,7 @@ Comma, separated, list.
 
 ## LinkedIn markdown schema
 
-`scripts/profile_to_linkedin_md.py` emits, and
-`scripts/normalize_linkedin_md.py` enforces, this shape:
+`scripts/profile_to_linkedin_md.py` emits, and `scripts/normalize_linkedin_md.py` enforces:
 
 ```markdown
 # Full Name
@@ -116,9 +99,6 @@ Concise keyword-rich LinkedIn headline.
 
 ## Location
 City, Country
-
-## Contact
-- linkedin.com/in/handle
 
 ## About
 Short paragraphs tailored to the target role family.
@@ -136,8 +116,13 @@ Short paragraphs tailored to the target role family.
 - Skill cluster
 ```
 
-Because `build/` is gitignored, treat these markdown files as working artifacts:
+`build/` is gitignored — treat these as working artifacts:
 
-- `build/linkedin_source.md` — normalized extraction you can refine
-- `build/linkedin_optimized.draft.md` — rewritten draft before validation
-- `build/linkedin_optimized.md` — final normalized LinkedIn copy
+- `build/resume.md` — editable resume source
+- `build/resume.pdf` — compiled output
+- `build/linkedin_source.md` — normalized LinkedIn extraction
+- `build/linkedin_optimized.md` — final LinkedIn copy
+
+## License
+
+MIT
