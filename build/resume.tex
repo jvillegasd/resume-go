@@ -16,7 +16,6 @@
 \usepackage{enumitem}
 \usepackage[colorlinks=true,urlcolor=blue,linkcolor=blue]{hyperref}
 \usepackage{fancyhdr}
-\usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
 
@@ -111,9 +110,9 @@
 
 %----------HEADING----------
 \begin{center}
-    \textbf{\Huge \scshape Johnny Villegas} \\ \vspace{6pt}
+    \textbf{\Huge \scshape David Figueroa} \\ \vspace{6pt}
     \small
-\href{mailto:johnnyvillegaslrs@gmail.com}{johnnyvillegaslrs@gmail.com} $|$ +57 3147740148 $|$ Barranquilla, Colombia $|$ \href{https://www.linkedin.com/in/jvillegasd}{linkedin.com/in/jvillegasd} $|$ \href{https://github.com/jvillegasd}{github.com/jvillegasd}\end{center}
+\href{mailto:davidfigueroa0327@gmail.com}{davidfigueroa0327@gmail.com} $|$ +57 320 206 6740\end{center}
 \vspace{6pt}
 
 
@@ -123,7 +122,7 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python, Node.js, PHP, Java} \\     \textbf{Frameworks}{: FastAPI, Django, Django-Ninja, Flask, Express.js, Vue.js} \\     \textbf{Cloud \& Infrastructure}{: AWS Lambda, AWS SQS, AWS SNS, AWS EventBridge, AWS CDK, AWS AppFlow, AWS Step Functions, AWS DynamoDB, AWS S3, Docker, Kubernetes} \\     \textbf{DevOps}{: GitHub Actions, Coolify} \\     \textbf{Observability}{: AWS CloudWatch, Datadog} \\     \textbf{Databases}{: PostgreSQL, MySQL, Neo4j, MongoDB, Snowflake, RabbitMQ, Redis} \\     \textbf{Fintech APIs}{: Plaid, Salesforce, Socure, Encompass, Twilio} \\     \textbf{Commerce \& Trading APIs}{: Shopify, InteractiveBrokers, Polygon, TradingView, FedEx, DHL, UPS} \\     \textbf{Testing \& Tools}{: Pytest, Moto, LocalStack, MinIO, Selenium, RQ, Cryptography}    }}
+     \textbf{Languages}{: JavaScript, TypeScript, Ruby, Python, PHP, SQL} \\     \textbf{Frameworks}{: React.js, Ruby on Rails, Django, Node.js, Angular, Flask} \\     \textbf{Cloud \& DevOps}{: AWS Services, GCP, Docker, GitHub Actions} \\     \textbf{Tools \& Platforms}{: Git, GitHub, WordPress, WooCommerce, Shopify, Strapi, Redis, RSpec, Redux, Zustand} \\     \textbf{Operating Systems}{: Windows, Ubuntu, RHEL/Fedora}    }}
  \end{itemize}
 
 
@@ -131,60 +130,74 @@
 \section{Experience}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Quantum Lending Solutions}{February 2024 - Present}
-      {Software Engineer}{Reston, Virginia, United States}
+      {Karat}{06/2023 - Present}
+      {Software Engineer}{Colombia, Barranquilla}
       \resumeItemListStart
-        \resumeItem{Building and maintaining financial core services across loan origination, fraud detection, cashflow analysis, and payment processing (Plaid, MoneyThumb, HyperVerge) - serving $\sim$14K loan applications/month ($\sim$\$32M disbursed monthly) using Python, FastAPI, and Django-Ninja on AWS.}
-        \resumeItem{Built an in-house graph-based fraud detection service using Neo4j to surface connected fraudulent applications across shared attributes (email, SSN, EIN, IPs) - integrating PostgreSQL, MySQL, and Snowflake with graph-visual PDF reports via FastAPI, meaningfully reducing manual fraud review overhead.}
-        \resumeItem{Optimized Cypher queries for edge-case fraud graph traversals, cutting execution time by 99\% ($\sim$11 min to $\sim$480ms).}
-        \resumeItem{Built a Plaid-powered payment processor microservice integrated with the legacy Back Office system, reducing overdue portfolio by 20-30\%.}
-        \resumeItem{Designed an event-driven architecture using RabbitMQ, AWS SQS/SNS, and Kubernetes, improving system throughput and decoupling 15+ platform services.}
-        \resumeItem{Automated Salesforce data ingestion via AWS AppFlow, eliminating manual data transfers and saving the ops team $\sim$5 hours/week.}
-        \resumeItem{Optimized API endpoints and SQL queries, reducing response latency by 99\% ($\sim$15 min to $\sim$600ms) across core platform services.}
-        \resumeItem{Built a FastAPI service that automatically runs 6 bank-statement validation checks (data coverage, name/address match, balance continuity, revenue consistency) via SNS triggers - replacing manual pre-underwriter review, publishing a downstream readiness event, and exposing results via REST API.}
-        \resumeItem{Led code reviews across the platform team, enforcing design patterns that meaningfully reduced production regression incidents.}
-        \resumeItem{Raised test coverage across platform services from 30\% to 90\%+ using Pytest and Moto, reducing production regressions.}
+        \resumeItem{Engineered and led development of a redesigned candidate invitation workflow, including a complex time-zone-aware scheduling calendar built with React.}
+        \resumeItem{Improved user experience by reducing average page loading times from 2 seconds to 300ms.}
+        \resumeItem{Spearheaded the migration of a core Ruby on Rails service from Webpacker to Vite, improving developer productivity with hot reloading.}
+        \resumeItem{Collaborate closely with design and product teams to refine features, promote best practices through code reviews, and maintain comprehensive testing.}
+        \resumeItem{Technologies \& Tools: React.js, Ruby on Rails, TypeScript, Zustand, AWS, GitHub Actions, Docker, SQL.}
       \resumeItemListEnd
     \resumeSubheading
-      {Camino Financial}{February 2023 - February 2024}
-      {Software Engineer}{Los Angeles, California, United States}
+      {Leanware}{02/2023 - 06/2024}
+      {Full Stack Developer}{Barranquilla}
       \resumeItemListStart
-        \resumeItem{Maintained and extended the legacy Django Back Office system for the Credit team, shipping features and resolving bugs that meaningfully unblocked loan processing workflows.}
-        \resumeItem{Designed and implemented an event-driven architecture using AWS EventBridge and CDK, decoupling platform services and meaningfully improving system reliability.}
-        \resumeItem{Shipped financial core microservices for Plaid and Socure integrations, lead management, and Salesforce sync - enabling automated fraud score routing to Salesforce lead objects via AWS EventBridge.}
-        \resumeItem{Improved microservices observability using AWS Powertools, reducing root cause identification time from 3-4 hours to 30-45 minutes per incident.}
-        \resumeItem{Delivered a serverless pipeline via AWS Lambda, Step Functions, and EventBridge that processes CSV files to generate targeted Plaid-linked campaign URLs - enabling the marketing team to launch their first automated loan campaigns.}
+        \resumeItem{Spearheaded development of a B2B project while working directly with the client and serving as the only developer for over a year.}
+        \resumeItem{Maintained strong UX and stability through agile iteration, trunk-based repository management, and monorepo practices for small teams.}
+        \resumeItem{Promoted engineering best practices and quality technology adoption through technical talks.}
+        \resumeItem{Managed client expectations and project deadlines while producing well-tested code.}
+        \resumeItem{Technologies \& Tools: React.js, Django, TypeScript, React Router, GCP, GitHub, GitHub Actions, Docker, Python.}
       \resumeItemListEnd
     \resumeSubheading
-      {Globant}{May 2022 - January 2023}
-      {Software Engineer}{Barranquilla, Atlantico, Colombia}
+      {Alignable}{05/2022 - 11/2022}
+      {Software Engineer}{Barranquilla}
       \resumeItemListStart
-        \resumeItem{Shipped a Python/FastAPI microservice for a staffing-tech client that evaluates ML model outputs through a decisioning tree, returning human-readable candidate-to-job compatibility explanations at scale.}
+        \resumeItem{Improved robustness and performance of website chat functionality with backend and frontend changes.}
+        \resumeItem{Worked with the team on a questionnaire that improved the social network's matchmaking capabilities.}
+        \resumeItem{Integrated an existing email contact import feature with the questionnaire to improve user experience and provide more data for matchmaking.}
+        \resumeItem{Became a subject-matter expert on core features and helped the team work effectively with those areas.}
+        \resumeItem{Technologies \& Tools: Ruby on Rails, React.js, TypeScript, BEM, Redis, RSpec, Redux.}
       \resumeItemListEnd
     \resumeSubheading
-      {Leanware}{August 2021 - April 2022}
-      {Software Engineer}{Barranquilla, Atlantico, Colombia}
+      {Leanware}{04/2021 - 05/2021}
+      {Full Stack Developer}{Barranquilla}
       \resumeItemListStart
-        \resumeItem{Delivered a PDF generation web app that batch-processes CSV input to populate document templates using Node.js on GCP, saving users $\sim$2 hours per batch.}
-        \resumeItem{Shipped a secure file hosting service for sensitive customer documents with end-to-end encryption using AWS KMS, Python, Flask, and AWS Serverless - eliminating reliance on third-party storage for regulated data.}
-        \resumeItem{Shipped a near real-time algorithmic trading bot with 4 custom strategies - integrating Polygon, InteractiveBrokers, and TradingView webhooks for signal processing and order execution at $\sim$650ms per signal using Python and AWS Serverless.}
+        \resumeItem{Designed and developed UIs in Angular and React.js with an emphasis on UX.}
+        \resumeItem{Architected serverless microservices and optimized performance for data- and resource-intensive APIs on AWS.}
+        \resumeItem{Helped build robust B2B and SaaS products with strong user experiences.}
+        \resumeItem{Went beyond customer requirements to identify edge cases and potential bugs early in development.}
+        \resumeItem{Led a SaaS project as the company's first full-stack developer.}
+        \resumeItem{Technologies \& Tools: Angular, React.js, AWS, Django, Node.js, GCP.}
       \resumeItemListEnd
     \resumeSubheading
-      {ISWE GROUP}{June 2020 - April 2022}
-      {Software Engineer}{Buenos Aires Province, Argentina}
+      {Freelancer}{06/2020 - 03/2021}
+      {Web Developer}{}
       \resumeItemListStart
-        \resumeItem{Built a web scraper that automates FDA Priority Notice webform submissions using Python, Selenium, and RQ - increasing throughput from 1 to 4 submissions per 15 minutes and freeing staff to focus on order processing.}
-        \resumeItem{Shipped a vehicle broker prototype enabling real-time insurance quote generation by integrating Argentinian SOAP insurance APIs using Python, Flask, Vue.js, and PostgreSQL.}
-        \resumeItem{Shipped an inventory management system integrated with Shopify for product tracking and order fulfillment, generating shipping labels via FedEx, DHL, and UPS APIs - scaling order processing from 10 to 40+ orders/day using Python, Flask, Vue.js, and MongoDB.}
-        \resumeItem{Extended the inventory management system with multi-store support, enabling creation and management of Shopify store clusters.}
+        \resumeItem{Developed WordPress websites and ecommerce stores based on client requirements.}
+        \resumeItem{Provided support and built new services for companies updating existing software solutions.}
+        \resumeItem{Worked with clients to build MVPs and test business ideas using agile methodologies.}
+        \resumeItem{Helped small businesses and entrepreneurs grow with quality software while keeping development within limited budgets.}
+        \resumeItem{Technologies \& Tools: WordPress, WooCommerce, Strapi, Python, Flask, Angular, Shopify.}
       \resumeItemListEnd
     \resumeSubheading
-      {City Lending Inc}{October 2019 - May 2020}
-      {Back End Developer}{Barranquilla, Atlantico, Colombia}
+      {City Lending Inc}{10/2019 - 05/2020}
+      {Web Developer}{Barranquilla}
       \resumeItemListStart
-        \resumeItem{Automated loan processing and status update workflows for the financial team via Encompass API integration using Python and AWS Serverless - eliminating manual status tracking.}
-        \resumeItem{Shipped internal loan officer tooling and REST API integrations with the Encompass API using Python, PHP, and AWS Serverless - streamlining daily workflows for the originations team.}
-        \resumeItem{Shipped a custom Salesforce Lightning chat component integrated with Twilio - used by all loan officers for lead follow-up, with automated assignment, lead sanitization, and data visualization dashboards using Apex, Node.js, and AWS Serverless.}
+        \resumeItem{Developed multiple microservices focused on improving integration and communication between internal dependencies.}
+        \resumeItem{Built frontends for services so employees could access data in real time.}
+        \resumeItem{Worked with the marketing team to find new ways to reach customers during the COVID pandemic.}
+        \resumeItem{Helped managers oversee operations and make decisions based on data.}
+        \resumeItem{Technologies \& Tools: Python, Node.js, Angular, AWS, PHP, Ruby on Rails.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Biggsoft}{07/2018 - 09/2019}
+      {Full Stack Developer}{Barranquilla}
+      \resumeItemListStart
+        \resumeItem{Developed a WordPress ecommerce site and worked heavily with CSS to create polished interfaces and animations.}
+        \resumeItem{Maintained a Ruby on Rails internal tool focused on data and forms.}
+        \resumeItem{Helped replace manual paperwork with internal software workflows.}
+        \resumeItem{Technologies \& Tools: WordPress, CSS, Ruby on Rails, Angular, jQuery.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -193,10 +206,10 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Universidad del Norte}{January 2016 - February 2021}
-      {Bachelor of Engineering - BE, Computer Science}{}
+      {Universidad del Norte}{11/2021}
+      {Computer Science}{Barranquilla, Atlantico}
       \resumeItemListStart
-        \resumeItem{Capstone: Built an arrhythmia detection system using stacked ML models (LDA + MLP) achieving 89\% accuracy on the MIT-BIH database - deployed REST APIs on AWS EC2 with a Vue.js SPA on AWS S3.}
+        \resumeItem{Capstone Project: Developed an application prototype aimed at helping teachers use Universal Design for Learning.}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
@@ -205,6 +218,11 @@
 
 
 
+%-----------LANGUAGES-----------
+\section{Languages}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{English}}
+ \end{itemize}
 
 
 %-------------------------------------------

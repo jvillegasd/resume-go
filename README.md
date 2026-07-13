@@ -47,6 +47,18 @@ python scripts/md_to_tex.py --input build/resume.md --out build/resume.tex --com
 
 Final output: `build/resume.pdf`.
 
+### Fedora prerequisites
+
+On Fedora, install Java plus the TeX Live packages used by the resume template:
+
+```bash
+sudo dnf install java-latest-openjdk-headless latexmk texlive-pdftex \
+  texlive-preprint texlive-enumitem texlive-titlesec texlive-marvosym \
+  texlive-fancyhdr texlive-tools texlive-metafont texlive-mfware
+```
+
+Then run the local Python commands above.
+
 ## Claude Code skills
 
 Install [Claude Code](https://claude.ai/code), then use these slash commands from the project root:
