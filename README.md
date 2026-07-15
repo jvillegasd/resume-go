@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/icon.png" alt="resume-go icon" width="128">
+</p>
+
 # resume-go
 
 LinkedIn PDF → ATS-optimized single-column LaTeX resume + LinkedIn profile optimizer.
