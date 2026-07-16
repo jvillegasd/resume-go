@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <rect width="512" height="512" rx="112" fill="#0B1F44"/>
+
+  <!-- Resume document with a folded top-right corner -->
+  <path d="M104 108q0-20 20-20h158l86 86v230q0 20-20 20H124q-20 0-20-20Z" fill="#F8FAFC"/>
+  <path d="M282 88v66q0 20 20 20h66Z" fill="#CBD5E1"/>
+
+  <!-- Text lines -->
+  <path d="M152 196h140M152 250h180M152 304h120" stroke="#0B1F44" stroke-width="24" stroke-linecap="round"/>
+
+  <!-- ATS-approved seal: green badge overlapping the document -->
+  <circle cx="358" cy="360" r="82" fill="#0B1F44"/>
+  <circle cx="358" cy="360" r="62" fill="#34D399"/>
+  <path d="M330 360l20 20 40-44" stroke="#0B1F44" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>
